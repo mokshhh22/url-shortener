@@ -23,18 +23,40 @@ You can also pass the following enviornment variables to configure the server.
 
 ### Get short url
 ```
-__Method__: POST
-__Route__: '/shorturl'
-__Headers__: Content-Type:application/json
-__Body__:
+Method: POST
+Route: '/shorturl'
+Headers: Content-Type:application/json
+Body:
 	{
 		url: 'https://www.google.com'
 	}
-__Response: 
+Response: 
 	{
     	url: "https://www.google.com",
     	short: "te8j5su",
     	clicks: 0,
+    	_id: "5eb6a7a7ff1aa921c1a9d2e5"
+	}
+```
+
+
+### Access source url using short
+```
+Method: GET
+Route: '/te8j5su'
+Redirect: 'https://www.google.com'
+```
+
+
+### Get clicks analytics
+```
+Method: GET
+Route: '/clicks/te8j5su'
+Response: 
+	{
+		url: "https://www.google.com",
+    	short: "te8j5su",
+    	clicks: 6,
     	_id: "5eb6a7a7ff1aa921c1a9d2e5"
 	}
 ```
