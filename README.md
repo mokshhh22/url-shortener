@@ -17,3 +17,24 @@ You can also pass the following enviornment variables to configure the server.
 |:-------------------:|:----------------------------:|:------------------:|
 |         PORT        |             5000             |       Number       |
 |      MONGO_URL      | "mongodb://localhost:27017/" |       String       |
+
+
+## API usage
+
+### Get short url
+```
+__Method__: POST
+__Route__: '/shorturl'
+__Headers__: Content-Type:application/json
+__Body__:
+	{
+		url: 'https://www.google.com'
+	}
+__Response: 
+	{
+    	url: "https://www.google.com",
+    	short: "te8j5su",
+    	clicks: 0,
+    	_id: "5eb6a7a7ff1aa921c1a9d2e5"
+	}
+```
