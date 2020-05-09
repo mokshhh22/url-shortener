@@ -27,16 +27,16 @@ Method: POST
 Route: '/shorturl'
 Headers: Content-Type:application/json
 Body:
-	{
-		url: 'https://www.google.com'
-	}
+{
+	url: 'https://www.google.com'
+}
 Response: 
-	{
-    	url: "https://www.google.com",
+{
+	url: "https://www.google.com",
     	short: "te8j5su",
     	clicks: 0,
     	_id: "5eb6a7a7ff1aa921c1a9d2e5"
-	}
+}
 ```
 
 
@@ -53,10 +53,10 @@ Redirect: 'https://www.google.com'
 Method: GET
 Route: '/clicks/te8j5su'
 Response: 
-	{
-		url: "https://www.google.com",
+{
+	url: "https://www.google.com",
     	short: "te8j5su",
     	clicks: 6,
     	_id: "5eb6a7a7ff1aa921c1a9d2e5"
-	}
+}
 ```
