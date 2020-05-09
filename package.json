@@ -4,8 +4,8 @@
   "description": "url-shortener help you to shorten your big URLs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "prestart": "npm install",
+    "start": "node index.js",
   },
   "author": "Moksh Jain",
   "license": "ISC",
